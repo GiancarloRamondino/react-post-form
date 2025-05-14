@@ -1,46 +1,21 @@
-import { useState } from 'react'
 import './App.css'
+import lista from './assets/lista.jsx'
+import Card from './components/Card.jsx'
+
 
 function App() {
-  const {formData, setFormData} = useState({
-    autor: '',
-    title: '',
-    body: '',
-    public: ''
-  })
-
+  
+  
   return (
     <>
+      <h1>Lista</h1>
       <div className="row">
         <div className="col">
+          <button className='btn btn-primary' onClick={lista}>Lista</button>
+        </div>
+        <div className="col">
           <div className="card">
-            <input
-              type="text"
-              placeholder="Autore"
-              className='form control'
-              value={formData.autor}
-              onChange={(e) => setFormData({...formData})} 
-            />
-            <input
-              type="text"
-              placeholder="Titolo"
-              className='form control'
-              value={formData.title}
-              onChange={(e) => setFormData({...formData})}
-            />
-            <textarea
-              placeholder="Corpo"
-              className='form control'
-              value={formData.body}
-              onChange={(e) => setFormData({...formData})}
-            />
-            <input
-              type="text"
-              placeholder="Pubblico"
-              className='form control'
-              value={formData.public}
-              onChange={(e) => setFormData({...formData})}
-            />
+            <Card />
           </div>
         </div>       
       </div>    
