@@ -30,11 +30,10 @@ function App() {
       <h1>Lista</h1>
       <div className="row">
         <div className="col">
-          <button className='btn btn-primary' onClick={handleClick}>Inserisci</button>
-        </div>
-        <div className="col">
           <div className="card">
-                <div className="card">
+            <div>
+              <button className='btn btn-primary' onClick={handleClick}>Inserisci</button>
+            </div>
             <div>  
               <label htmlFor="" className='form-label'>Autore</label>
               <input
@@ -84,7 +83,7 @@ function App() {
               />   
             </div>
           </div>
-          </div>
+          
         </div>       
       </div>    
     </>
